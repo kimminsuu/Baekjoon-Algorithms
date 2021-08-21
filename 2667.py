@@ -4,7 +4,7 @@ n = int(input())
 graph = list()
 
 for i in range(n) :
-    graph.append(list(map(int, input().split())))
+    graph.append(list(map(int, input())))
 
 aparts = []
 check = [[0]*n for _ in range(n)]
