@@ -1,5 +1,6 @@
 import sys
 read = sys.stdin.readline
+sys.setrecursionlimit(10000)
 
 def dfs(x,y) :
     dx = [1,1,-1,-1,1,-1,0,0]
