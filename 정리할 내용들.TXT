@@ -1,0 +1,12 @@
+1.
+import sys를 통해 sys.stdin.readline으로 input들을 읽어올 수 있다.
+2.
+sys.setrecursionlimit(숫자)로 파이썬의 재귀 제한을 할 수 있다.
+sys.getrecursionlimit()으로 현재 재귀 제한을 받아올 수 있음.
+3.
+max(a,b)로 max값을 찾았다면 이차원 배열에서 최대,최솟값 구할 때 map을 쓴다
+max(map(max,graph))다음과 같이 graph의 max값을 출력 가능.
+max(max, graph)로는 그냥 이차원 배열 한 층만 출력할 수 있음. for문을 쓰면 시간이 낭비됨.
+4.
+.split()으로 공백 기준 input을 받는다.
+5. read.strip('\n')을 사용하면 개행문자는 입력받지 않을 수 있다.
