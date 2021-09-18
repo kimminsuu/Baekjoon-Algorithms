@@ -1,5 +1,6 @@
 import sys
 read = sys.stdin.readline
+sys.setrecursionlimit(10**6)
 
 n = int(read())
 have = list(map(int,read().split()))
@@ -10,7 +11,7 @@ have.sort()
 for i in range(m) :
     start, end = 0,n-1
     while start <= end :
-        mid = start+end //2
+        mid = (start + end) //2
         if have[mid] == check[i] :
             print(1, end=" ")
             break
