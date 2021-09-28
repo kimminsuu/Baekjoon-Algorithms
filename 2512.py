@@ -6,7 +6,7 @@ money = list(map(int,read().split()))
 m = int(read())
 money.sort()
 
-start, end = money[0], money[-1]
+start, end = 0, max(money)
 while start <= end :
     mid = (start+end) // 2
     val = 0
