@@ -3,22 +3,24 @@ read = sys.stdin.readline
 
 n = int(read())
 s = list(map(int,read().split()))
+
 s.sort()
+left, right = 0 , n-1
+ans = s[left]+s[right]
+start= left
+end = right
+while left < right :
+    mid = s[left]+s[right]
+    if abs(mid) < abs(ans) :
+        ans = mid
+        start = left
+        end = right
+        if ans == 0:
+            break
 
-start, end = 0, n-1
-res = end - start
-ans = list()
-while start < end :
-    left = s[start]
-    right = s[end]
-
-    if abs(left+right) < res :
-        res = abs(left+right)
-        ans = [left, right]
-
-    if left+right < 0 :
-        start += 1
+    if mid < 0 :
+        left += 1
     else :
-        end -= 1
-print(ans[0], ans[1])
-    
+        right -= 1
+
+print(s[start],s[end])
