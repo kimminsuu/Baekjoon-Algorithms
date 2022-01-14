@@ -7,3 +7,7 @@ https://techxplore.com/news/2021-12-safety-citizens-visual-ai.html - Visual AI t
 https://techxplore.com/news/2021-12-artificial-intelligence-common-uncommon.html - 인공지능으로 상식은 비상식적이다.
 
 https://techxplore.com/news/2021-12-artificial-intelligence-magnifies-electron-microscopes.html - 인공지능은 전자 현미경의 유용성을 확대
+
+https://techxplore.com/news/2022-01-2d-3d-inflate-machine.html - 머신러닝을 통해 모양을 부풀린다.(2D -> 3D)
+
+https://techxplore.com/news/2022-01-ai-varies-greatly-application.html - AI에 대한 대중의 신뢰가 애플리케이션에 따라 다르다.
