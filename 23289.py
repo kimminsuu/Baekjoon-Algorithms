@@ -139,7 +139,7 @@ if __name__ == '__main__' :
         choco +=1
         if choco > 100 :
             choco = 101
-        #    break
+            break
         flag = step4()
 
     print(choco)
