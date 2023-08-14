@@ -1,0 +1,12 @@
+https://wikidocs.net/31379
+
+-트랜스포머는 기존 seq2seq 모델의 문제점이었던 RNN 부분을 없애고 아예 Attention만을 사용함.
+-하이퍼파라미터 : dmodel=512, num_layers=6, num_heads=8, dff=2048
+-트랜스포머의 구조
+ 1. 포지셔널 인코딩을 수행하여 이를 입력으로 사용(encoder, decoder 모두 사용)
+ 2. encoder의 self-attention, Masked decoder의 self-attention, encoder-decoder Attention으로 나뉨.
+ 3. 인코더에서 Multi-head self-attention을 수행한 후 기존 input과 Add&Norm을 사용하여 다음 FFNN의 input으로 사용
+ 3-1. FFNN에서도 같은 방식으로 Add&Norm 사용
+ 4. 디코더는 masked self-attention을 사용하여 아직까지 볼 수 없는 정보는 masking하였음.
+ 4-1. 이후 인코더-디코더 attention으로 멀티헤드 어텐션 구현.
+ 5. 이런식으로 num_layers만큼 encoder decoder를 쌓아 트랜스포머를 구현함.
