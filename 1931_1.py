@@ -5,7 +5,7 @@ if __name__=='__main__' :
     arr = []
     for i in range(N) :
         arr.append(list(map(int,input().split())))
-    arr.sort(key=lambda x:x[1])
+    arr.sort(key=lambda x:(x[1], x[0]))
     idx = -1
     ans = 0
     for c in arr:
