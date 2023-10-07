@@ -1,35 +1,20 @@
-''' #이건 겹치는 선이 총 몇개 그어져야하나
-N = int(input())
-arr = list()
-
-for _ in range(N) :
-    arr.append(list(map(int,input().split())))
-arr.sort(key=lambda x: (x[1], -x[0]))
-ans = 0
-idx = -1
-for i in range(len(arr)) :
-    if idx <= arr[i][0] :
-        ans+=1
-        idx = arr[i][1]
-print(ans)
-'''
 import sys
-from collections import deque
-read = sys.stdin.readline()
+import heapq
 
-N = int(read().rstrip())
+input = sys.stdin.readline
+N = int(input())
 arr = []
 for _ in range(N):
-    a,b = map(int,input().rstrip().split())
-    arr.append((a,1)) # 선분 시작
-    arr.append((b,-1)) # 선분 끝
+    arr.append(list(map(int,input().split())))
 
 arr.sort()
-tot = 0
-cnt = 0
+hq=[]
+heapq.heappush(hq,arr[0][1])
+_max = 1
 
-for _ , point in arr:
-    cnt += point
-    tot = max(tot,cnt)
-
-print(tot)
+for i in range(1,N):
+    while hq and arr[i][0] >=hq[0]:
+        heapq.heappop(hq)
+    heapq.heappush(hq,arr[i][1])
+    _max = max(_max,len(hq))
+print(_max)
